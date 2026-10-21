@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Noor</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      margin: 20px auto;
+      padding: 20px;
+      border: 5px solid #ff69b4;
+      border-radius: 20px;
+      width: 80%;
+      background: #fff0f5;
+      position: relative;
+    }
+    .triangle-up, .triangle-down {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      margin: auto;
+    }
+    .triangle-up {
+      border-bottom: 50px solid #ff69b4;
+    }
+    .triangle-down {
+      border-top: 50px solid #ff69b4;
+    }
+    .circle {
+      width: 120px;
+      height: 120px;
+      background: #ffb6c1;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .cake {
+      margin: 20px auto;
+      width: 200px;
+      height: 150px;
+      background: #ffe4e1;
+      border: 3px solid #ff69b4;
+      border-radius: 10px;
+      position: relative;
+    }
+    .candle {
+      width: 10px;
+      height: 40px;
+      background: yellow;
+      margin: 5px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .flame {
+      width: 10px;
+      height: 10px;
+      background: orange;
+      border-radius: 50%;
+      margin: auto;
+    }
+    .balloons {
+      margin: 20px;
+    }
+    .balloon {
+      width: 40px;
+      height: 60px;
+      background: red;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 10px;
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+    .flowers {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h2>بسم الله الرحمن الرحيم</h2>
+  <div class="card">
+    <div class="triangle-up"></div>
+    <div class="circle">Happy Birthday Noor</div>
+    <div class="triangle-down"></div>
+
+    <div class="cake">
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+    <p>🎉 Noor, may your life be filled with endless joy, sweet moments, and blessings always! 🎉</p>
+
+    <div class="balloons">
+      <div class="balloon" style="background: red;"></div>
+      <div class="balloon" style="background: blue;"></div>
+      <div class="balloon" style="background: green;"></div>
+    </div>
+
+    <div class="flowers">💐 A gajra of flowers for Princess Noor 💐</div>
+    <p>✨ Noor, you are the shining star, the lyrical princess of our hearts ✨</p>
+  </div>
+
+  <script>
+    // Candle click to turn off flame
+    document.querySelectorAll('.candle').forEach(candle => {
+      candle.addEventListener('click', () => {
+        let flame = candle.querySelector('.flame');
+        if (flame) {
+          flame.style.display = flame.style.display === 'none' ? 'block' : 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
